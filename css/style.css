@@ -1,5 +1,5 @@
 	body, input, select, textarea {
-		color: white;
+		color: black;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 15pt;
 		font-weight: 300 !important;
@@ -64,6 +64,8 @@
 		background-position: bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
+		background-size: 2250px auto;
+		width: 6750px;
 		left: 0;
 		opacity: 0.5;
 		position: fixed;
