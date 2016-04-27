@@ -1,0 +1,74 @@
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Kubernetes架构</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="./public/img/article-header.jpg" border="0" alt="">
+                    </div>
+
+                    <div class="mdl-grid portfolio-article">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>在分布式存储解决方案之上的kubernetes集群应包含kubelet节点和控制组件（APIserver、scheduler，controller-manager）的节点。下图展现了kubernetes集群的架构模式，其中有一些功能还正在开发设计当中，如让kubelet在容器中运行，使scheduler100%可动态安装或卸载。
+                            </p>
+                        </div>
+                        
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <div class="mdl-card__media">
+                                <img class="article-image" src="./public/img/architecture.jpg" border="0" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernetes Node.<br>
+                            当我们审视系统架构时，我们把它分解成各个services。
+                            这些services在node上运行并且组成了集群级的控制面板。<br>
+                            Kubernetes Node有services来运行应用容器并且这些services可被master系统管理。
+                            每个node都运行docker。Docker来管理images下载和运行容器。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubelet.<br>
+                            Kubelet管理pods和它们的容器、images、volumes等。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kube-proxy.<br>
+每个node运行一套简单的网络代理proxy和LB。这与在kubernetes Api定义的在每个node上的services匹配。这个service可以在后端中处理简单的TCP和UDP转发。<br>
+通过DNS或者环境变量可以发现service endpoint。这些变量决定了被service proxy管理的port。<br>
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernetes Control Plane<br>
+K8s的控制面板为一套组件。目前它们均在单个master节点上运行，还不支持HA集群。将这些组件组合来构建一个集群的统一视图。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Etcd.<br>
+所有持续的master状态在etcd进程中存储。Etcd提供了可靠的配置数据存取服务。在etcd watch的帮助下，协同组件间可以极快的获取数据变更通知。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernetes API Server.<br>
+Apiserver提供了k8s的api. 它被设计为拥有多数或所有商业逻辑的组件或插件的CRUD server。主要处理REST操作、验证这些操作、更新在etcd里相应的对象。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Scheduler.<br>
+Scheduler通过/binding API将未分配到实际node的pod绑定到node中。Scheduler应是可插拔的。我们也期待未来有支持多集群的scheduler，甚至用户定义的scheduler出现。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernetes Controller Manager Server<br>
+所有集群级的函数目前由Controller manager执行。
+例如，endpoints 对象被endpoints controller创建和更新，node controller发现、管理、监控node。
+最终，这些controller应该被分解为各个组件，互不依赖，并且可以热插拔。<br>
+Replicationcontroller是位于pod API层的一个机制。不要与上文的controller混淆。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <hr>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <button class="mdl-button mdl-button--colored" onclick="backToBlogIndex();">Back To Blog List</button>
+                        </div>
+                    </div>
+                </div>

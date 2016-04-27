@@ -1,0 +1,62 @@
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Kubernetes基本元素</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="./public/img/article-header.jpg" border="0" alt="">
+                    </div>
+
+                    <div class="mdl-grid portfolio-article">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Cluster是指使用Kubernetes运行应用的一组物理主机或虚拟机或其他基础设施资源。
+                            </p>
+                        </div>
+                        
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Node是指运行Kubernetes的一台物理或虚拟机。Pod可以在其上部署，运行。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Pod是指一组协同工作的容器和存储。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Label是resource资源的一对KV，可被用于管理和选择资源的子集。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Selector通过匹配label来辨别相关资源。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Replication Controller确保特定一组pod能够同时工作。其能随时增减pod的数量规模，也能当某个pod出错时重新启动新的pod继续承担工作。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Service定义了一组pod所能提供的服务，当需要访问这些pod时，只需要访问该服务所开放的IP和端口。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Volumn是用于容器挂载的目录。Kubernetes的volume建于Docker volume之上，增加了volumn和device的配置。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Secret存储一些敏感数据，例如可以通过request让container变为可用的认证token。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Namespace可以视为资源名称的前缀。它用于帮助不同项目，团队，客户共享一个集群cluster，例如在不同团队间防止命名冲突。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Annotation是一对存储非认证的附加数据的KV。这些数据通常由工具或者系统产生。暂不支持过滤KV。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <hr>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <button class="mdl-button mdl-button--colored" onclick="backToBlogIndex();">Back To Blog List</button>
+                        </div>
+                    </div>
+                </div>

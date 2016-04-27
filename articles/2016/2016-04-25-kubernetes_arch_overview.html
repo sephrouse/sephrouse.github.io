@@ -1,0 +1,54 @@
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Kubernetes设计概览</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="./public/img/article-header.jpg" border="0" alt="">
+                    </div>
+
+                    <div class="mdl-grid portfolio-article">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernets是用来管理多主机中容器化应用的系统。它提供了一些基本的机制，如应用的部署、维护、扩容。
+                            </p>
+                        </div>
+                        
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernetes打造了一套可靠的自定义原语来维护用户所想要的状态。这些原语为kubernetes添加的主要功能。自愈机制，如自动重启，重新部署，复制容器。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>K8s主要应用目标是哪些由多容器组建的应用，如弹性化应用，分布式微服务。它还被设计为帮助非容器化应用迁移至kubernetes。因此，它包含了松散和紧凑模式管理容器的抽象，并为容器提供了方法来发现彼此和通信。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernetes运行用户在集群上运行一套容器。系统会自动选择node来运行这些容器。
+                            目前scheduler非常简单，但我们希望它以后能够复杂些。分配是一项复杂的活，需要考虑策略、拓扑、负荷。这些因素都会影响系统的可用性，性能和容量。
+                            Scheduler需要思考单独资源和集体资源的需求，服务需求的质量，硬件软件策略的限制，类同和不同的规格描述，数据位置，内部负荷干扰，期限等。
+                            指定负荷需求将在必要时通过API暴露。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>Kubernetes 应可在云服务提供商上运行，也可在物理机器上运行。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>单个的kubernetes集群不能横跨多个availability zones。相反，我们建议建立一个上层来复制完整的跨多zone的应用部署。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>最后，kubernetes想成为可扩展，可插拔，积木式的OSS平台和工具箱。因此，架构上，我们希望kubernets被打造成可插拔组件和层集，
+                             能提供使用其他scheduler，controllers，存储系统和分发机制的能力，我们正向这个方向来发展。
+                             此外，我们希望其他人能不修改kubernetes核心代码来扩展kubernetes的功能，例如更高一级PAAS功能或多集群层。
+                             因此，它的API不仅仅为终端用户使用，而是开发人员的工具和扩展。它的API还想如工具的开放系统，自动化系统，更高一级API层来服务。
+                             总之，没有内部或组件间的API。所有API，包含scheduler、controller等使用的api，都是可用的。
+                             为了解决更复杂的使用场景，人们可以通过完全透明的，可组合的方法来访问低一级别的API。
+                            </p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <hr>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <button class="mdl-button mdl-button--colored" onclick="backToBlogIndex();">Back To Blog List</button>
+                        </div>
+                    </div>
+                </div>
